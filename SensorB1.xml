@@ -13,8 +13,8 @@
           <block type="logic_compare" id="4" inline="true">
             <field name="OP">GTE</field>
             <value name="A">
-              <block type="sensor_light" id="30">
-                <field name="LIGHT">LEFT</field>
+              <block type="sensor_object" id="58">
+                <field name="OBJECT">LEFTFRONT</field>
               </block>
             </value>
             <value name="B">
@@ -46,8 +46,12 @@
                       </block>
                     </value>
                     <next>
-                      <block type="oled_linerect" id="13">
-                        <field name="OBJECT">RECT</field>
+                      <block type="oled_drawnumber" id="76" inline="true">
+                        <value name="NUMBER">
+                          <block type="sensor_object" id="77">
+                            <field name="OBJECT">LEFTFRONT</field>
+                          </block>
+                        </value>
                       </block>
                     </next>
                   </block>
@@ -59,11 +63,6 @@
         <value name="IF1">
           <block type="logic_compare" id="14" inline="true">
             <field name="OP">GTE</field>
-            <value name="A">
-              <block type="sensor_light" id="31">
-                <field name="LIGHT">RIGHT</field>
-              </block>
-            </value>
             <value name="B">
               <block type="math_number" id="16">
                 <field name="NUM">30</field>
