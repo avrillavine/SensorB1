@@ -7,60 +7,102 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="oled_cleardisplay" id="60">
-        <next>
-          <block type="controls_if" id="136" inline="false">
-            <mutation elseif="1"></mutation>
-            <value name="IF0">
-              <block type="sensor_object" id="152">
-                <field name="OBJECT">LEFTFRONT</field>
+      <block type="controls_if" id="136" inline="false">
+        <mutation elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="296" inline="true">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="sensor_object" id="297">
+                <field name="OBJECT">RIGHTFRONT</field>
               </block>
             </value>
-            <statement name="DO0">
-              <block type="oled_setcursor" id="168" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="169">
-                    <field name="NUM">10</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_number" id="170">
-                    <field name="NUM">10</field>
+            <value name="B">
+              <block type="math_number" id="298">
+                <field name="NUM">30</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="oled_cleardisplay" id="225">
+            <next>
+              <block type="robot_delay" id="234" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="236">
+                    <field name="NUM">250</field>
                   </block>
                 </value>
                 <next>
-                  <block type="oled_linerect" id="175">
-                    <field name="OBJECT">RECT</field>
+                  <block type="oled_setcursor" id="168" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="169">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="170">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_linerect" id="175">
+                        <field name="OBJECT">RECT</field>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
-            </statement>
-            <value name="IF1">
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="294" inline="true">
+            <field name="OP">EQ</field>
+            <value name="A">
               <block type="sensor_object" id="176">
                 <field name="OBJECT">RIGHTFRONT</field>
               </block>
             </value>
-            <statement name="DO1">
-              <block type="oled_setcursor" id="50" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="74">
-                    <field name="NUM">20</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_number" id="75">
-                    <field name="NUM">20</field>
+            <value name="B">
+              <block type="math_number" id="295">
+                <field name="NUM">30</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="oled_cleardisplay" id="226">
+            <next>
+              <block type="robot_delay" id="235" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="237">
+                    <field name="NUM">250</field>
                   </block>
                 </value>
                 <next>
-                  <block type="oled_linerect" id="105">
-                    <field name="OBJECT">RECT</field>
+                  <block type="oled_setcursor" id="50" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="74">
+                        <field name="NUM">20</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="75">
+                        <field name="NUM">20</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_linerect" id="105">
+                        <field name="OBJECT">RECT</field>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
-            </statement>
+            </next>
           </block>
-        </next>
+        </statement>
       </block>
     </statement>
   </block>
