@@ -25,33 +25,36 @@
           </block>
         </value>
         <statement name="DO0">
-          <block type="oled_cleardisplay" id="7">
+          <block type="multimedia_stopupdate" id="101">
             <next>
-              <block type="robot_delay" id="8" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="9">
-                    <field name="NUM">250</field>
-                  </block>
-                </value>
+              <block type="oled_cleardisplay" id="7">
                 <next>
-                  <block type="oled_setcursor" id="10" inline="true">
-                    <value name="STARTX">
-                      <block type="math_number" id="11">
-                        <field name="NUM">10</field>
-                      </block>
-                    </value>
-                    <value name="STARTY">
-                      <block type="math_number" id="12">
-                        <field name="NUM">10</field>
+                  <block type="robot_delay" id="8" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="9">
+                        <field name="NUM">250</field>
                       </block>
                     </value>
                     <next>
-                      <block type="oled_drawnumber" id="76" inline="true">
-                        <value name="NUMBER">
-                          <block type="sensor_object" id="77">
-                            <field name="OBJECT">LEFTFRONT</field>
+                      <block type="oled_setcursor" id="10" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="11">
+                            <field name="NUM">10</field>
                           </block>
                         </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="12">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_linerect" id="128">
+                            <field name="OBJECT">RECT</field>
+                            <next>
+                              <block type="multimedia_doupdate" id="125"></block>
+                            </next>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
@@ -76,29 +79,36 @@
           </block>
         </value>
         <statement name="DO1">
-          <block type="oled_cleardisplay" id="17">
+          <block type="multimedia_stopupdate" id="126">
             <next>
-              <block type="robot_delay" id="18" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="19">
-                    <field name="NUM">250</field>
-                  </block>
-                </value>
+              <block type="oled_cleardisplay" id="17">
                 <next>
-                  <block type="oled_setcursor" id="20" inline="true">
-                    <value name="STARTX">
-                      <block type="math_number" id="21">
-                        <field name="NUM">20</field>
-                      </block>
-                    </value>
-                    <value name="STARTY">
-                      <block type="math_number" id="22">
-                        <field name="NUM">20</field>
+                  <block type="robot_delay" id="18" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="19">
+                        <field name="NUM">250</field>
                       </block>
                     </value>
                     <next>
-                      <block type="oled_linerect" id="23">
-                        <field name="OBJECT">RECT</field>
+                      <block type="oled_setcursor" id="20" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="21">
+                            <field name="NUM">20</field>
+                          </block>
+                        </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="22">
+                            <field name="NUM">20</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_linerect" id="23">
+                            <field name="OBJECT">RECT</field>
+                            <next>
+                              <block type="multimedia_doupdate" id="127"></block>
+                            </next>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
